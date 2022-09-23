@@ -13,6 +13,10 @@ export class NavbarComponent implements OnInit {
       title: 'Home',
     },
     {
+      path: '/about',
+      title: 'About',
+    },
+    {
       path: '/pipes',
       title: 'Pipes',
     },

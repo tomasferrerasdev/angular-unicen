@@ -7,6 +7,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PipeListComponent } from './components/pipe-list/pipe-list.component';
 import { FormsModule } from '@angular/forms';
+import { SavinelliAboutComponent } from './components/savinelli-about/savinelli-about.component';
+import { CartComponent } from './components/cart/cart.component';
+import { SavinelliPipesComponent } from './components/savinelli-pipes/savinelli-pipes.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,9 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     PipeListComponent,
+    SavinelliAboutComponent,
+    CartComponent,
+    SavinelliPipesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
