@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { SavinelliAboutComponent } from './components/savinelli-about/savinelli-about.component';
 import { CartComponent } from './components/cart/cart.component';
 import { SavinelliPipesComponent } from './components/savinelli-pipes/savinelli-pipes.component';
+import { InputIntegerComponent } from './components/input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SavinelliPipesComponent } from './components/savinelli-pipes/savinelli-
     SavinelliAboutComponent,
     CartComponent,
     SavinelliPipesComponent,
+    InputIntegerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

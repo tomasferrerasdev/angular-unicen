@@ -61,15 +61,4 @@ export class PipeListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  upQuanity(pipe: IPipes): void {
-    if (pipe.quantity === pipe.stock) return;
-    pipe.quantity++;
-  }
-  downQuanity(pipe: IPipes): void {
-    if (pipe.quantity === 0) return;
-    pipe.quantity--;
-  }
-
-  onChangeQuantity(event: any, pipe: IPipes) {}
 }

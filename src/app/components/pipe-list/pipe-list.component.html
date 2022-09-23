@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table mb-0">
   <thead>
     <tr>
       <th>Image</th>
@@ -21,17 +21,8 @@
         </span>
       </td>
       <td>
-        <button type="button" class="btn btn-light" (click)="downQuanity(pipe)">
-          -
-        </button>
-        <input type="number" [(ngModel)]="pipe.quantity" placeholder="0" />
-        <button type="button" class="btn btn-light" (click)="upQuanity(pipe)">
-          +
-        </button>
+        <app-input-integer [pipe]="pipe" *ngIf="pipe.stock"></app-input-integer>
       </td>
     </tr>
   </tbody>
 </table>
-
-directiva de clases directiva de for directiva de if ternario binding events
-two-way
