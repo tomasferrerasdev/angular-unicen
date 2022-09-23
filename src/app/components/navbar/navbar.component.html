@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-xxl">
+  <div class="container-fluid container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="/assets/img/savinelli_logo.png" alt="savinelli logo image" />
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li *ngFor="let item of navItems" class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="item.path"
+            routerLinkActive="active"
+            >{{ item.title }}</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="italy-flag"></div>
+</nav>

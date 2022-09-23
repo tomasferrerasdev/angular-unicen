@@ -1,0 +1,37 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Bend</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let pipe of pipes" class="align-middle">
+      <td><img [src]="pipe.image" alt="{{ pipe.title }}" /></td>
+      <td>{{ pipe.title | titlecase }}</td>
+      <td>{{ pipe.bend | titlecase }}</td>
+      <td>{{ pipe.price | currency: "EUR":"symbol" }}</td>
+      <td>
+        <span [ngClass]="{ 'no-stock': pipe.stock === 0 }">
+          {{ pipe.stock === 0 ? "No stock" : pipe.stock }}
+        </span>
+      </td>
+      <td>
+        <button type="button" class="btn btn-light" (click)="downQuanity(pipe)">
+          -
+        </button>
+        <input type="number" [(ngModel)]="pipe.quantity" placeholder="0" />
+        <button type="button" class="btn btn-light" (click)="upQuanity(pipe)">
+          +
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+directiva de clases directiva de for directiva de if ternario binding events
+two-way
