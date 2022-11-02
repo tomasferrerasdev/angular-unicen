@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PipeCartService } from 'src/app/pipe-cart.service';
+import { PipeCartService } from '../../pipe-cart.service';
 import { IPipes } from '../pipe-list/pipes';
 
 @Component({

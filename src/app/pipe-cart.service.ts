@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { IPipes } from './components/pipe-list/pipes';
+import { IPipes } from '../app/components/pipe-list/pipes';
 
 @Injectable({
   providedIn: 'root',
