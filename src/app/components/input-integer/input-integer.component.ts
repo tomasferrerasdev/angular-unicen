@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IPipes } from '../pipe-list/pipes';
 
 @Component({
@@ -10,17 +10,31 @@ export class InputIntegerComponent implements OnInit {
   constructor() {}
 
   @Input()
-  pipe!: IPipes;
+  quantity!: number;
+
+  @Input()
+  max!: number;
+
+  @Output()
+  quantityChange: EventEmitter<number> = new EventEmitter<number>();
+
+  @Output()
+  maxReached: EventEmitter<string> = new EventEmitter<string>();
 
   ngOnInit(): void {}
 
-  upQuanity(pipe: IPipes): void {
-    if (pipe.quantity === pipe.stock) return;
-    pipe.quantity++;
+  upQuanity(): void {
+    if (this.quantity < this.max) {
+      this.quantity++;
+      this.quantityChange.emit(this.quantity);
+    } else {
+      this.maxReached.emit('Se alcanzo el max');
+    }
   }
-  downQuanity(pipe: IPipes): void {
-    if (pipe.quantity === 0) return;
-    pipe.quantity--;
+  downQuanity(): void {
+    if (this.quantity === 0) return;
+    this.quantity--;
+    this.quantityChange.emit(this.quantity);
   }
 
   onChangeQuantity(event: any, pipe: IPipes) {}

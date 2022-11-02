@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IPipes } from './pipes';
+import { PipeCartService } from '../../pipe-cart.service';
 
 @Component({
   selector: 'app-pipe-list',
@@ -58,7 +59,17 @@ export class PipeListComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private cart: PipeCartService) {}
 
   ngOnInit(): void {}
+
+  addToCart(pipe: IPipes): void {
+    if (!pipe.quantity) return;
+    this.cart.addToCart(pipe);
+    pipe.stock -= pipe.quantity;
+    pipe.quantity = 0;
+  }
+  maxReached(m: string) {
+    console.log(m);
+  }
 }

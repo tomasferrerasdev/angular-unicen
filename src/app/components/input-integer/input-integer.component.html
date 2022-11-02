@@ -1,15 +1,11 @@
-<div class="input-group">
-  <div class="input-group">
-    <div class="input-group-prepend">
-      <button type="button" class="btn btn-light" (click)="downQuanity(pipe)">
-        -
-      </button>
-    </div>
-    <input type="number" [(ngModel)]="pipe.quantity" placeholder="0" />
-    <div class="input-group-apend">
-      <button type="button" class="btn btn-light" (click)="upQuanity(pipe)">
-        +
-      </button>
-    </div>
+<div class="input-group d-flex justify-content-between">
+  <div class="input-group-prepend">
+    <button type="button" class="btn btn-light" (click)="downQuanity()">
+      -
+    </button>
+  </div>
+  <input type="number" [(ngModel)]="quantity" placeholder="0" />
+  <div class="input-group-apend">
+    <button type="button" class="btn btn-light" (click)="upQuanity()">+</button>
   </div>
 </div>

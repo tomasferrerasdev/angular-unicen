@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+.italy-flag {
+  width: 100%;
+  content: "";
+  height: 10px;
+  background: -moz-linear-gradient(
+    top,
+    #008c45 0%,
+    #008c45 35%,
+    #f4f9ff 35%,
+    #f4f9ff 67%,
+    #cd212a 67%,
+    #cd212a 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #008c45 0%,
+    #008c45 35%,
+    #f4f9ff 35%,
+    #f4f9ff 67%,
+    #cd212a 67%,
+    #cd212a 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #008c45 0%,
+    #008c45 35%,
+    #f4f9ff 35%,
+    #f4f9ff 67%,
+    #cd212a 67%,
+    #cd212a 100%
+  );
+}

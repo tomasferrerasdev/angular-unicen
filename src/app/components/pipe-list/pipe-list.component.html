@@ -11,17 +11,43 @@
   </thead>
   <tbody class="table-group-divider">
     <tr *ngFor="let pipe of pipes" class="align-middle">
-      <td><img [src]="pipe.image" alt="{{ pipe.title }}" /></td>
+      <td>
+        <img [src]="pipe.image" alt="{{ pipe.title }}" />
+      </td>
       <td>{{ pipe.title | titlecase }}</td>
       <td>{{ pipe.bend | titlecase }}</td>
       <td>{{ pipe.price | currency: "EUR":"symbol" }}</td>
       <td>
         <span [ngClass]="{ 'no-stock': pipe.stock === 0 }">
-          {{ pipe.stock === 0 ? "No stock" : pipe.stock }}
+          {{ pipe.stock === 0 ? "NO STOCK" : pipe.stock }}
         </span>
       </td>
       <td>
-        <app-input-integer [pipe]="pipe" *ngIf="pipe.stock"></app-input-integer>
+        <div class="d-flex flex-column justify-content-between">
+          <div class="d-grid">
+            <app-input-integer
+              [(quantity)]="pipe.quantity"
+              [max]="pipe.stock"
+              *ngIf="pipe.stock"
+              (maxReached)="maxReached($event)"
+            ></app-input-integer>
+          </div>
+
+          <div class="d-flex" *ngIf="pipe.stock === 0">
+            <button class="btn btn-warning flex-fill">
+              Check other products
+            </button>
+          </div>
+
+          <div class="d-flex" *ngIf="pipe.stock !== 0">
+            <button
+              class="btn btn-warning flex-fill mt-1"
+              (click)="addToCart(pipe)"
+            >
+              Buy
+            </button>
+          </div>
+        </div>
       </td>
     </tr>
   </tbody>
