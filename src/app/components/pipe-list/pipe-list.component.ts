@@ -14,7 +14,8 @@ export class PipeListComponent implements OnInit {
       bend: 'straight',
       price: 1557,
       stock: 3,
-      image: '/assets/img/savinelli-autograph.jpg',
+      image:
+        'https://www.savinelli.it/media/catalog/product/cache/c56afb36d3e034f12fd9001accb20888/P/F/PF155LMC-6-0045_1.jpg',
       quantity: 0,
     },
     {
@@ -22,7 +23,8 @@ export class PipeListComponent implements OnInit {
       bend: 'bent',
       price: 1557.72,
       stock: 9,
-      image: '/assets/img/savinelli-autograph1.jpg',
+      image:
+        'https://www.savinelli.it/media/catalog/product/cache/e58d290970859d0f111b56f2a5dc6ac7/P/F/PF100SMS-6-0003_1.jpg',
       quantity: 0,
     },
     {
@@ -30,7 +32,8 @@ export class PipeListComponent implements OnInit {
       bend: 'bent',
       price: 684.99,
       stock: 0,
-      image: '/assets/img/savinelli-autograph2.jpg',
+      image:
+        'https://www.savinelli.it/media/catalog/product/cache/e58d290970859d0f111b56f2a5dc6ac7/P/F/PF100SNG-6-0002_1.jpg',
       quantity: 0,
     },
     {
@@ -38,7 +41,8 @@ export class PipeListComponent implements OnInit {
       bend: 'straight',
       price: 245,
       stock: 15,
-      image: '/assets/img/savinelli-artisan.jpg',
+      image:
+        'https://www.savinelli.it/media/catalog/product/cache/e58d290970859d0f111b56f2a5dc6ac7/P/1/P139ZN-6-003_1.jpg',
       quantity: 0,
     },
     {
@@ -46,7 +50,8 @@ export class PipeListComponent implements OnInit {
       bend: 'bent',
       price: 99.18,
       stock: 9,
-      image: '/assets/img/st-nicholas.jpg',
+      image:
+        'https://www.savinelli.it/media/catalog/product/cache/e58d290970859d0f111b56f2a5dc6ac7/P/1/P139ZM-6-001_1.jpg',
       quantity: 0,
     },
     {
@@ -54,7 +59,8 @@ export class PipeListComponent implements OnInit {
       bend: 'straight',
       price: 180.3,
       stock: 4,
-      image: '/assets/img/arlecchino.jpg',
+      image:
+        'https://www.savinelli.it/media/catalog/product/cache/e58d290970859d0f111b56f2a5dc6ac7/P/4/P406ZNR-6_1.jpg',
       quantity: 0,
     },
   ];
